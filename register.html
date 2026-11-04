@@ -1,0 +1,161 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html">Engineering College</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About & Programs</a></li>
+        <li class="nav-item"><a class="nav-link" href="admissions.html">Admissions</a></li>
+        <li class="nav-item"><a class="nav-link" href="student-life.html">Student Life</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item"><a class="btn btn-primary ms-lg-2" href="register.html">Register</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- Отступ сверху, чтобы контент не перекрывался фиксированным навбаром -->
+<div style="margin-top: 80px;"></div>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Engineering College - Registration</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">⚡ Engineering College</a>
+      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About & Programs</a></li>
+          <li class="nav-item"><a class="nav-link" href="admissions.html">Admissions</a></li>
+          <li class="nav-item"><a class="nav-link" href="student-life.html">Student Life</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item ms-lg-2"><a class="btn btn-yellow btn-sm px-3 active" href="register.html">Register</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div style="margin-top: 76px;"></div>
+
+  <div class="container my-5" style="max-width: 650px;">
+    <h2 class="fw-bold mb-4 text-center">Student Registration Form</h2>
+    
+    <div id="successMessage" class="alert alert-success d-none" role="alert">
+      Registration successful! Welcome to Engineering College.
+    </div>
+
+    <form id="regForm" novalidate>
+      <div class="mb-3">
+        <label for="fullName" class="form-label">Full Name *</label>
+        <input type="text" class="form-control" id="fullName" required>
+        <div class="invalid-feedback">Please enter your full name.</div>
+      </div>
+
+      <div class="mb-3">
+        <label for="email" class="form-label">Email Address *</label>
+        <input type="email" class="form-control" id="email" required>
+        <div class="invalid-feedback">Please enter a valid email address.</div>
+      </div>
+
+      <div class="mb-3">
+        <label for="phone" class="form-label">Phone Number *</label>
+        <input type="tel" class="form-control" id="phone" required>
+        <div class="invalid-feedback">Please enter your phone number.</div>
+      </div>
+
+      <div class="mb-3">
+        <label for="program" class="form-label">Desired Program *</label>
+        <select class="form-select" id="program" required>
+          <option selected disabled value="">Choose program...</option>
+          <option>Computer Science & Engineering</option>
+          <option>Robotics & Mechatronics</option>
+          <option>Electrical Power Engineering</option>
+          <option>Civil & Structural Engineering</option>
+        </select>
+        <div class="invalid-feedback">Please select a program.</div>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label d-block">Study Mode *</label>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="studyMode" id="fullTime" value="Full-Time" checked>
+          <label class="form-check-label" for="fullTime">Full-Time</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="studyMode" id="partTime" value="Part-Time">
+          <label class="form-check-label" for="partTime">Part-Time</label>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="intakeDate" class="form-label">Intended Intake Date *</label>
+        <input type="date" class="form-control" id="intakeDate" required>
+        <div class="invalid-feedback">Please select an intake date.</div>
+      </div>
+
+      <div class="mb-3">
+        <label for="password" class="form-label">Password *</label>
+        <input type="password" class="form-control" id="password" minlength="6" required>
+        <div class="invalid-feedback">Password must be at least 6 characters long.</div>
+      </div>
+
+      <div class="mb-3">
+        <label for="confirmPassword" class="form-label">Confirm Password *</label>
+        <input type="password" class="form-control" id="confirmPassword" required>
+        <div class="invalid-feedback">Passwords must match.</div>
+      </div>
+
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="terms" required>
+        <label class="form-check-label" for="terms">I agree to terms and privacy policy *</label>
+        <div class="invalid-feedback">You must agree before submitting.</div>
+      </div>
+
+      <button type="submit" class="btn btn-yellow w-100 py-2">Submit Registration</button>
+    </form>
+  </div>
+
+  <footer class="text-center py-3">
+    <p class="mb-0">&copy; 2026 Engineering College. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById('regForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      
+      const password = document.getElementById('password').value;
+      const confirmPassword = document.getElementById('confirmPassword').value;
+      const confirmInput = document.getElementById('confirmPassword');
+
+      if (password !== confirmPassword) {
+        confirmInput.setCustomValidity('Mismatch');
+      } else {
+        confirmInput.setCustomValidity('');
+      }
+
+      if (this.checkValidity() === false) {
+        this.classList.add('was-validated');
+      } else {
+        this.classList.add('was-validated');
+        document.getElementById('successMessage').classList.remove('d-none');
+        this.reset();
+        this.classList.remove('was-validated');
+      }
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
